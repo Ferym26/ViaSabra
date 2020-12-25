@@ -1,3 +1,19 @@
 +b.hero
+
+	+e.__bg
+		picture
+			source(media="(max-width: 767px)" srcset=`images/hero-mob-bg.jpg`)
+			source(media="(min-width: 768px)" srcset=`images/hero-bg.jpg`)
+			img(src=`images/hero-bg.jpg` alt="pic")
+
 	.container
-		p hero
+		+e.__inner
+			+e.__content
+				+e.__title
+					+e('h1').__title-text This is where the text comes in
+					+e.__title-descr Awesome Experiences, this way
+				+e.__arrow
+					+icon('down-arrow')
+				+e.__action
+					a.btn.btn--gradient.btn--lg(href="#") Hottest Detail
+					a.btn(href="#") Get in Touch

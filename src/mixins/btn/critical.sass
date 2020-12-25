@@ -1,22 +1,19 @@
 .btn
 	$this: &
-
 	position: relative
 	display: inline-block
-	height: 72px
-	padding: 0 50px
-
+	height: 54px
+	padding: 0 25px
 	font-family: $font-main
-	font-size: 20px
-	line-height: 72px
-	border-radius: 2px
+	font-weight: 600
+	font-size: 24px
+	line-height: 54px
+	border-radius: 50px
 	text-decoration: none
 	text-align: center
-	letter-spacing: -0.5px
-	color: #221F20
+	color: #333
 	text-decoration: none !important
-	background-color: $c-main
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	background-color: #fff
 
 	border: none
 	outline: none
@@ -25,17 +22,18 @@
 	white-space: nowrap
 	+transish
 
-	&:hover
-		background-color: #EBE200
-
-
-	&:active
-		background-color: #D6CE00
+	+media($lg)
+		height: 40px
+		line-height: 40px
+		font-size: 20px
 
 	&:hover,
 	&:active,
 	&:focus
 		text-decoration: none !important
+
+	&:active
+		transform: translate(0, 2px)
 
 	// Состояние отключеной кнопки
 	&[disabled]
@@ -44,30 +42,20 @@
 		color: #B9BABE !important
 		cursor: default
 
-	// Обводка
-	&--outline
-		background-color: $trp
-		border: 1px solid #60a4a3
+
+	&--gradient
 		color: #fff
-		box-shadow: none
+		background-color: rgba(34,165,214,1)
+		background: linear-gradient(164deg, rgba(34,165,214,1) 0%, rgba(44,236,159,1) 100%)
 
-		&:hover
-			color: $c-main
-			border-color: $c-main
-			background-color: $trp
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	&--lg
+		height: 96px
+		padding: 0 70px
+		line-height: 96px
+		font-size: 30px
 
-		&:active
-			color: darken($c-main, 5%)
-			border-color: darken($c-main, 5%)
-			background-color: $trp
-
-		&[disabled]
-			border-color: $c-bg !important
-			background-color: #fff !important
-			color: $c-bg !important
-
-	&--sm
-		height: 48px
-		padding: 0 30px
-		line-height: 48px
+		+media($lg)
+			height: 40px
+			padding: 0 25px
+			line-height: 40px
+			font-size: 20px

@@ -1,5 +1,5 @@
 // Grid breakpoints
-$lg: 1250px;
+$lg: 1350px;
 $md: 768px;
 
 $gutter: 30px;
@@ -12,18 +12,14 @@ $grid-breakpoints: (
 	// xl: $xl
 );
 
-$container-max-widths: (
-	md: 768px,
-	lg: 1200px,
-);
-
 // Fonts types
 $c-size: 16px;
 $font-main: 'Nunito', sans-serif;
+$font-sec: 'Titillium', sans-serif;
 
 // Colors
 $c-main:		#ffec00;
 $c-sec:			red;
 $c-bg:			#F5F6F8;
-$c-text:		#01030F;
+$c-text:		#000;
 $trp:			transparent;
