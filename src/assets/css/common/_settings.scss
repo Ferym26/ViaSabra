@@ -1,5 +1,6 @@
 // Grid breakpoints
-$lg: 1350px;
+$xl: 1360px;
+$lg: 980px;
 $md: 768px;
 
 $gutter: 30px;
@@ -9,7 +10,13 @@ $grid-breakpoints: (
 	// sm: $sm,
 	md: $md,
 	lg: $lg,
-	// xl: $xl
+	xl: $xl
+);
+
+$container-max-widths: (
+	md: 768px,
+	lg: 1024px,
+	xl: 1330px,
 );
 
 // Fonts types

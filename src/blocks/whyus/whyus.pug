@@ -1,0 +1,30 @@
++b.whyus
+	+e.__bg
+		picture
+			source(media="(max-width: 767px)" srcset=`images/whyus-mob-bg.jpg`)
+			source(media="(min-width: 768px)" srcset=`images/whyus-bg.jpg`)
+			img.lazy-img(src=`images/whyus-bg.jpg` alt="pic")
+	.container
+		+e.__inner
+			+e.__title
+				+e.__title-text Why us title 1
+				+e.__title-descr Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ducimus quos dolor facilis officiis neque minus! Quo, maxime? Dolore rem accusantium eum aut accusamus, amet nihil? Animi nihil quaerat accusantium.
+			+e.__list
+				+card-whyus({
+					icon: 'card-why-icon-1.svg',
+					bg: 'card-why-bg-1.jpg',
+					title: 'Reason 1',
+					descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo, similique nam veniam commodi, culpa cumque facilis quaerat harum consequatur, aspernatur ad molestiae! Nemo recusandae incidunt maiores dolore quia fugit?',
+				})
+				+card-whyus({
+					icon: 'card-why-icon-1.svg',
+					bg: 'card-why-bg-1.jpg',
+					title: 'Reason 2',
+					descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo, similique nam veniam commodi, culpa cumque facilis quaerat harum consequatur, aspernatur ad molestiae! Nemo recusandae incidunt maiores dolore quia fugit?',
+				})
+				+card-whyus({
+					icon: 'card-why-icon-1.svg',
+					bg: 'card-why-bg-1.jpg',
+					title: 'Reason 3',
+					descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo explicabo, similique nam veniam commodi, culpa cumque facilis quaerat harum consequatur, aspernatur ad molestiae! Nemo recusandae incidunt maiores dolore quia fugit?',
+				})

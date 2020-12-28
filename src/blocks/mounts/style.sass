@@ -1,0 +1,29 @@
+.mounts
+	position: relative
+
+	&__inner
+		display: flex
+		align-items: flex-end
+		min-height: 1050px
+		padding: 100px 0 110px
+
+		+media($xl)
+			min-height: 600px
+			padding: 60px 0
+
+		+media($lg)
+			min-height: 400px
+
+		+media($md)
+			min-height: initial
+			padding: 100px 0 30px
+
+	&__bg
+		position: absolute
+		+sizeblock(100%)
+		@extend %trbl
+		z-index: -10
+
+		img
+			+sizeblock(100%)
+			object-fit: cover

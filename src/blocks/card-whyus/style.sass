@@ -1,0 +1,68 @@
+.card-whyus
+	$this: &
+	position: relative
+	flex: 1 0 330px
+	max-width: 330px
+	height: 400px
+	margin: 0 35px
+	padding: 135px 30px 20px
+	overflow: hidden
+	z-index: 10
+
+	+media($xl)
+		flex: 1 0 300px
+		max-width: 300px
+		height: 320px
+		margin: 0 15px
+		padding: 100px 20px 20px
+
+	+media($md)
+		margin: 0
+
+	&:not(:last-child)
+
+		+media($lg)
+			margin-bottom: 15px
+
+	&:hover
+
+		#{$this}__bg
+			transform: scale(1.05)
+
+			&::after
+				background-color: rgba(#000, 0.65)
+
+	&__bg
+		position: absolute
+		+sizeblock(100%)
+		@extend %trbl
+		transition: transform 0.4s ease
+		will-change: transform
+		z-index: -5
+
+		&::after
+			+pseudo
+			+sizeblock(100%)
+			@extend %trbl
+			background-color: rgba(#000, 0.5)
+			transition: background-color 0.3s ease
+			z-index: 10
+
+		img
+			+sizeblock(100%)
+			object-fit: cover
+
+	&__icon
+		+sizeblock(50px)
+		margin-bottom: 15px
+
+	&__title
+		margin-bottom: 10px
+		+line-clamp(2)
+		font-size: 18px
+		font-weight: 700
+		color: #fff
+
+	&__descr
+		+line-clamp(4)
+		color: #fff

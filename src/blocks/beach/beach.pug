@@ -1,0 +1,16 @@
++b.beach
+	+e.__bg
+		picture
+			source(media="(max-width: 767px)" srcset=`images/beach-mob-bg.jpg`)
+			source(media="(min-width: 768px)" srcset=`images/beach-bg.jpg`)
+			img.lazy-img(src=`images/beach-bg.jpg` alt="pic")
+	.container
+		+e.__inner
+			+e.__icon
+				+lazy-img({pic: 'search.png'})
+			+e.__top
+				+e.__title Dealing with Covid 19
+				+e.__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis totam deserunt officiis obcaecati nihil ipsum exercitationem error eius veritatis voluptatem aliquid qui facere quam, id consequatur blanditiis voluptates atque nisi?
+				+e.__action
+					a.btn.btn--arrow Read more about our Eco Sysctem
+						+icon('right-arrow')

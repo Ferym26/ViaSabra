@@ -1,0 +1,6 @@
+mixin card-vanta(data)
+	+b.card-vanta
+		+e.__bg
+			+lazy-img({pic: data.pic})
+		+e.__content
+			+e('a').__title(href='#')= data.title

@@ -122,3 +122,11 @@
 	bottom: 0;
 	left: 0;
 }
+
+@mixin line-clamp($num) {
+	display: -webkit-box;
+	-webkit-line-clamp: $num;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

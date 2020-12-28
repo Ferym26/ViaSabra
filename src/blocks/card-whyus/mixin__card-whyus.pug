@@ -1,0 +1,8 @@
+mixin card-whyus(data)
+	+b.card-whyus
+		+e.__bg
+			+lazy-img({pic: data.bg})
+		+e.__icon
+			+lazy-img({pic: data.icon})
+		+e.__title= data.title
+		+e.__descr= data.descr

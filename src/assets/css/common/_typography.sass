@@ -28,3 +28,65 @@ a
 
 	+media($md)
 		font-size: 40px
+
+.blockquote
+	color: #fff
+
+	+media($xl)
+		padding: 0 50px
+
+	+media($md)
+		padding: 0 25px
+
+	&__text
+		position: relative
+		margin-bottom: 25px
+		font-weight: 700
+		font-size: 30px
+		text-align: center
+
+		+media($lg)
+			font-size: 24px
+
+		+media($md)
+			font-size: 20px
+
+		&::after
+			+pseudo
+			+sizeblock(50px)
+			top: -20px
+			left: -50px
+			background: url('../images/quote.svg') no-repeat 50% 50%
+			background-size: cover
+			transform: rotate(180deg)
+
+			+media($md)
+				+sizeblock(30px)
+				left: -30px
+
+		&::before
+			+pseudo
+			+sizeblock(50px)
+			bottom: -20px
+			right: -50px
+			background: url('../images/quote.svg') no-repeat 50% 50%
+			background-size: cover
+			transform: rotate(180deg)
+
+			+media($md)
+				+sizeblock(30px)
+				right: -30px
+
+	&__name
+		padding-right: 300px
+		font-weight: 600
+		font-style: italic
+		font-size: 30px
+		text-align: right
+
+		+media($lg)
+			font-size: 18px
+
+		+media($md)
+			padding-right: 0
+			font-size: 16px

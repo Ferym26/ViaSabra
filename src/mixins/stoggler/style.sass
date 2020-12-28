@@ -1,0 +1,67 @@
+.stoggler
+	$this: &
+	position: relative
+	width: 480px
+	height: 150px
+	border-radius: 150px
+	box-shadow: inset 0 0 3px #ccc
+	cursor: pointer
+	overflow: hidden
+
+	+media($xl)
+		width: 320px
+		height: 100px
+
+	&__bg
+		position: absolute
+		+sizeblock(100%)
+		@extend %trbl
+		z-index: 5
+
+		img
+			position: absolute
+			+sizeblock(100%)
+			@extend %trbl
+			object-fit: cover
+			transition: opacity 0.5s ease
+
+	&__carret
+		position: absolute
+		top: 10px
+		left: 10px
+		+sizeblock(130px)
+		+circle
+		background-color: #fff
+		box-shadow: 0 0 10px #555
+		border: 10px solid #7ad9a2
+		transition: transform 0.6s ease-in-out
+		will-change: transform
+		z-index: 10
+
+		+media($xl)
+			+sizeblock(80px)
+			border: 8px solid #7ad9a2
+
+	&--left
+
+		#{$this}__carret
+
+		.sbg-1
+			opacity: 1
+
+		.sbg-2
+			opacity: 0
+
+	&--right
+
+		#{$this}__carret
+			transform: translate(330px, 0)
+
+			+media($xl)
+				transform: translate(220px, 0)
+
+		.sbg-1
+			opacity: 0
+
+		.sbg-2
+			opacity: 1
