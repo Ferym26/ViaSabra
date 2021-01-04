@@ -4,13 +4,23 @@ block vars
 	- var bodyClass = ''
 	- var footerClass = ''
 	- var headerClass = ''
-	- var pageTitle = 'registration 1'
+	- var pageTitle = 'Registration - Stage One'
 	- var dir = './'
 	- var layout = ''
 
 
 block main
-	p 123
+	include ../blocks/title-pic/title-pic
+	.page-content
+		.container
+			.row
+				.col.col-content
+					include ../blocks/breadcrumb/breadcrumb
+					include ../blocks/fprogress/fprogress
+					include ../blocks/pd-block/pd-block-stage1
+
+				.col.col-sidebar
+					include ../blocks/sidebar/sidebar
 
 
 block popups

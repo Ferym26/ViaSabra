@@ -1,0 +1,79 @@
++b.pd-block
+	form(action="#")
+		+e.__title
+			.row
+				.col-12
+					h3 Who is Traveling
+
+		.row
+			.col-xl-6
+				.row
+					.col-lg-6
+						.form-group
+							label.field-label(for='#select-adalts') Adults (12+)
+							select.select-styler#select-adalts.not-init(
+									name='selectAdalts'
+									data-placeholder="0"
+									required
+								)
+								option
+								option 1
+								option 2
+								option 3
+								option 4
+					.col-lg-6
+						.form-group
+							label.field-label(for='#select-childer') Children (2-12)
+							select.select-styler#select-childer.not-init(
+									name='selectChilder'
+									data-placeholder="0"
+									required
+								)
+								option
+								option 1
+								option 2
+								option 3
+								option 4
+				.row
+					.col-12
+						h3 Personal Details
+				.row
+					.col-12
+						.form-group
+							input.form-control(
+								type='email',
+								name='email',
+								placeholder='Email'
+							)
+						.form-group
+							input.form-control(
+								type='text',
+								name='firstName',
+								placeholder='First Name'
+							)
+						.form-group
+							input.form-control(
+								type='text',
+								name='lastName',
+								placeholder='Last Name'
+							)
+				.row
+					.col-5
+						.form-group.lang
+							select.select-styler#select-code.not-init(
+									name='selectCode'
+									data-placeholder=""
+									required
+								)
+								option
+								option(class="lang-us" style='background-image: url("images/flag-1.jpg")') +123
+								option(class="lang-ru") +456
+					.col-7
+						.form-group
+							input.form-control(
+								type='tel',
+								name='phone',
+							)
+
+			.col-xl-6
+				p 123

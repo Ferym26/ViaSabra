@@ -18,6 +18,7 @@ const uiInits = {
 		// this.showModalTimer();
 		this.slider();
 		this.stoggler();
+		this.forms();
 	},
 
 	svgPolifill: function() {
@@ -286,7 +287,27 @@ const uiInits = {
 
 
 		})
-	}
+	},
+
+	forms: function() {
+		// Элементы форм
+		// простой кастомный селект
+		const customSelect = $('.select-styler');
+		if (customSelect.length > 0) {
+			customSelect.styler({
+				// selectVisibleOptions: 12,
+				onFormStyled: function () {
+					$('.select-styler').removeClass('not-init');
+				}
+			});
+		}
+
+		// мультиселект
+		const multiSelect = $('.js_select2-init');
+		if (multiSelect.length > 0) {
+			multiSelect.select2();
+		}
+	},
 }
 
 export default uiInits
