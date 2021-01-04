@@ -1,0 +1,94 @@
+.fprogress
+	$this: &
+	display: flex
+	justify-content: space-between
+	margin: 0 0 23px
+	padding: 0 0 22px
+	border-bottom: 1px solid #000
+
+	&__item
+		position: relative
+		flex: 1 0 130px
+		max-width: 130px
+
+		&.active
+
+			#{$this}__icon
+
+				&::after
+					background: url('../images/map-marker.svg') no-repeat 50% 50%
+					background-size: cover
+
+			#{$this}__line
+				background-color: #d1d2d7
+				background-image: linear-gradient(90deg, #5d6174, #d1d2d7)
+
+		&.active ~ *
+
+			#{$this}__icon
+				+sizeblock(26px)
+				background-color: #d1d2d7
+
+				&::after
+					display: none
+
+				&::before
+					+pseudo
+					+sizeblock(10px)
+					+center
+					+circle
+					background-color: #fff
+
+			#{$this}__line
+				background-color: #d1d2d7
+
+		&.error
+
+			&::before
+				+pseudo
+				+sizeblock(50px)
+				top: -35px
+				left: 53px
+				background: url('../images/progress-error.png') no-repeat 50% 50%
+				background-size: cover
+
+	&__pic
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		+sizeblock(54px)
+		margin: 0 auto 12px
+		// filter: url("#goo")
+
+	&__line
+		position: absolute
+		+sizeblock(250px, 6px)
+		+hcenter
+		left: 50%
+		background-color: #5d6174
+
+		+media($xl)
+			width: 150px
+
+	&__icon
+		position: relative
+		+sizeblock(54px)
+		background-color: #5d6174
+		+circle
+
+		&::after
+			+pseudo
+			+sizeblock(30px)
+			+center
+			background: url('../images/check.svg') no-repeat 50% 50%
+			background-size: cover
+
+	&__title
+		font-weight: 700
+		text-align: center
+
+
+.hidden-svg
+	position: absolute
+	left: -100000px

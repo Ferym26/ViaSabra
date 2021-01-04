@@ -1,0 +1,25 @@
+extends ../layout/layout
+
+block vars
+	- var bodyClass = ''
+	- var footerClass = ''
+	- var headerClass = ''
+	- var pageTitle = 'Registration - Complete'
+	- var dir = './'
+	- var layout = ''
+
+
+block main
+	include ../blocks/title-pic/title-pic
+	.container
+		.row
+			.col.col-content
+				include ../blocks/breadcrumb/breadcrumb
+				include ../blocks/fprogress/fprogress
+				include ../blocks/pd-block/pd-block
+
+			.col.col-sidebar
+				include ../blocks/sidebar/sidebar
+
+
+block popups

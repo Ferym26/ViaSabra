@@ -1,0 +1,16 @@
++b.breadcrumb
+	.container
+		.row
+			.col-12
+				+e('ul').__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+					+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="/" title="Main" itemprop="item")
+							span(itemprop="name") Breadcrumbs of the trip
+							meta(itemprop="position" content="0")
+					+e('li').__item.--mobile(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="#" title="Inner" itemprop="item")
+							span(itemprop="name") Breadcrumbs 02
+							meta(itemprop="position" content="2")
+					+e('li').__item.active(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						span(itemprop="name") This is the page type here
+						meta(itemprop="position" content="2")

@@ -1,0 +1,47 @@
+.breadcrumb
+	margin: 0 0 39px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: flex-start
+		margin: 0
+		padding: 0
+		list-style: none
+
+	&__item
+
+		&:hover
+
+			a
+				text-decoration: underline !important
+
+		&:last-child
+			padding-right: 0
+
+			span
+				display: block
+				font-weight: 700
+				font-size: 16px
+				padding: 5px 0
+				line-height: 1
+
+	a
+		position: relative
+		display: block
+		padding: 5px 5px 5px 0
+		font-size: 16px
+		line-height: 1
+		color: #000 !important
+		text-decoration: none !important
+		cursor: pointer
+		transition: color 0.3s ease
+
+		&:after
+			content: '/'
+
+
+		&:hover
+			color: $c-main
+			text-decoration: none

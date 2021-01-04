@@ -1,0 +1,27 @@
+//- svg.hidden-svg(width='0' height='0' xmlns='http://www.w3.org/2000/svg' version='1.1')
+	defs
+		filter#goo
+			fegaussianblur(in='SourceGraphic' stdDeviation='10' result='blur')
+			fecolormatrix(in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9' result='goo')
+			fecomposite(in='SourceGraphic' in2='goo' operator='atop')
+
++b.fprogress
+	+e.__item
+		+e.__pic
+			+e.__line
+			+e.__icon
+		+e.__title Choose Trip
+	+e.__item.active
+		+e.__pic
+			+e.__line
+			+e.__icon
+		+e.__title Personal Details
+	+e.__item
+		+e.__pic
+			+e.__line
+			+e.__icon
+		+e.__title Add Ons
+	+e.__item.error
+		+e.__pic
+			+e.__icon
+		+e.__title Confimation

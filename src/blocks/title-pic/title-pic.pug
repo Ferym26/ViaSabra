@@ -1,0 +1,32 @@
++b.title-pic
+	+e.__bg
+		picture
+			source(media="(max-width: 767px)" srcset="images/title-pic-mob.jpg")
+			source(media="(min-width: 768px)" srcset="images/title-pic.jpg")
+			img(src="images/title-pic.jpg", alt="pic")
+
+	.container
+		.row
+			.col-12
+				+e.__inner
+					+e.__head
+						+e.__head-title
+							h1 In search of Israeli Cuisine
+						+e.__head-meta
+							+label({
+								mod: 'red',
+								icon: 'time',
+								text: 'Last 5 Seats!'
+							})
+							+meta-icon({icon: 'heart'})
+							+meta-icon({icon: 'share'})
+					+e.__side
+						+e.__side-row
+							+e.__side-title Price range
+							+e.__side-descr From 599$ per person
+						+e.__side-row
+							+e.__side-title Tour time
+							+e.__side-descr 10 Days (Inc. Arv./Dpt.)
+						+e.__side-row
+							+e.__side-title Upcoming date
+							+e.__side-descr 7-15 November 2021
