@@ -1,0 +1,61 @@
+.card-upsale
+	$this: &
+	position: relative
+	height: calc(100% - 15px)
+	margin-bottom: 15px
+	padding: 35px 10px 8px
+	box-shadow: 0 0 8px #ccc
+	border: 3px solid $trp
+	border-radius: 10px
+	overflow: hidden
+	transition: border-color 0.3s
+
+	&:hover
+		border-color: #9edf52
+
+	&__pic
+		height: 107px
+
+		img
+			max-height: 100%
+			margin: 0 auto
+
+	&__body
+		margin-top: 40px
+		text-align: center
+
+	&__title
+		margin-bottom: 5px
+		font-size: 15px
+		font-weight: 700
+		+line-clamp(2)
+
+	&__descr
+		font-size: 14px
+		+line-clamp(5)
+
+	&__price
+		margin-top: 63px
+		font-size: 22px
+		font-weight: 700
+
+	&__action
+		margin-top: 2px
+
+	&--complete
+		display: flex
+		flex-direction: column
+		box-shadow: none
+
+		#{$this}__pic
+			max-height: 90px
+			margin-top: auto
+
+		#{$this}__body
+			margin-top: 20px
+
+		#{$this}__descr
+			font-size: 16px
+
+		#{$this}__action
+			margin-top: 65px

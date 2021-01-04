@@ -1,0 +1,24 @@
+mixin card-upsale(data)
+
+	+b.card-upsale(
+		class=data.mod ? data.mod : false
+	)
+
+		+e.__pic
+			+lazy-img({pic: data.pic})
+
+		+e.__body
+
+			if data.title
+				+e.__title= data.title
+
+			+e.__descr= data.descr
+
+			if data.price
+				+e.__price= data.price
+
+			+e.__action
+				a.btn.btn--green(
+					href="#"
+					class=data.btn.mod ? data.btn.mod : false
+				)= data.btn.text

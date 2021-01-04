@@ -1,0 +1,36 @@
++b.pd-block
+	.row
+		.col-xl-4.col-lg-6.col-md-4
+			+card-upsale({
+				pic: 'card-upsale-1.jpg',
+				title: 'Name of Addon bundel',
+				descr: 'This is my next text to explain the needed amount of text that should be presented here - like lorem ipsum but not as elaborated, really.',
+				price: '+999$',
+				btn: {
+					mod: 'btn--sm',
+					text: 'Add to Trip',
+				},
+			})
+		.col-xl-4.col-lg-6.col-md-4
+			+card-upsale({
+				pic: 'card-upsale-2.jpg',
+				title: 'Name of Addon bundel',
+				descr: 'This is my next text to explain the needed amount of text that should be presented here - like lorem ipsum but not as elaborated, really.',
+				price: '+9999$',
+				btn: {
+					mod: 'btn--sm',
+					text: 'Now Included',
+				},
+			})
+		.col-xl-4.col-lg-6.col-md-4
+			+card-upsale({
+				mod: '--complete',
+				pic: 'travel.png',
+				title: false,
+				descr: 'Unsure about your options? Everything would still be available later in the process!',
+				price: false,
+				btn: {
+					mod: '',
+					text: 'Complete Order',
+				},
+			})
