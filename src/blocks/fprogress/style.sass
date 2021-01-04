@@ -6,10 +6,27 @@
 	padding: 0 0 22px
 	border-bottom: 1px solid #000
 
+	+media($md)
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+
 	&__item
 		position: relative
 		flex: 1 0 130px
 		max-width: 130px
+
+		+media($md)
+			display: flex
+			align-items: center
+			flex: 1 0 100%
+			max-width: 100%
+			width: 100%
+
+		&:not(:last-child)
+
+			+media($md)
+				margin-bottom: 15px
 
 		&.active
 
@@ -52,6 +69,10 @@
 				background: url('../images/progress-error.png') no-repeat 50% 50%
 				background-size: cover
 
+				+media($md)
+					top: -30px
+					left: 30px
+
 	&__pic
 		position: relative
 		display: flex
@@ -61,15 +82,26 @@
 		margin: 0 auto 12px
 		// filter: url("#goo")
 
+		+media($md)
+			margin: 0 20px 0 0
+
 	&__line
 		position: absolute
-		+sizeblock(250px, 6px)
+		+sizeblock(230px, 6px)
 		+hcenter
 		left: 50%
 		background-color: #5d6174
 
 		+media($xl)
-			width: 150px
+			width: 130px
+
+		+media($lg)
+			width: 200px
+
+		+media($md)
+			width: calc(100% + 15px)
+			transform-origin: 0 50%
+			transform: translate(0, -50%) rotate(90deg)
 
 	&__icon
 		position: relative

@@ -10,7 +10,17 @@ block vars
 
 
 block main
-	p 123
+	include ../blocks/title-pic/title-pic
+	.page-content
+		.container
+			.row
+				.col.col-content
+					include ../blocks/breadcrumb/breadcrumb
+					include ../blocks/fprogress/fprogress
+					include ../blocks/pd-block/pd-block-error
+
+				.col.col-sidebar
+					include ../blocks/sidebar/sidebar
 
 
 block popups

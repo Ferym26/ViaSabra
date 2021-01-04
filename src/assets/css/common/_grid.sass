@@ -1,7 +1,20 @@
+.page-content
+	margin-bottom: 75px
+
 .col-content
-	padding-bottom: 75px
+	padding-right: 80px
+
+	+media($xl)
+		padding-right: 40px
+
+	+media($lg)
+		width: 100%
+		padding-right: 15px
 
 .col-sidebar
 	flex: 0 0 420px
 	max-width: 420px
-	padding-bottom: 75px
+
+	+media($lg)
+		flex: 0 0 100%
+		max-width: 100%

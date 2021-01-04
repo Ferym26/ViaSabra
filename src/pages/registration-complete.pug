@@ -11,15 +11,16 @@ block vars
 
 block main
 	include ../blocks/title-pic/title-pic
-	.container
-		.row
-			.col.col-content
-				include ../blocks/breadcrumb/breadcrumb
-				include ../blocks/fprogress/fprogress
-				include ../blocks/pd-block/pd-block
+	.page-content
+		.container
+			.row
+				.col.col-content
+					include ../blocks/breadcrumb/breadcrumb
+					include ../blocks/fprogress/fprogress
+					include ../blocks/pd-block/pd-block-complete
 
-			.col.col-sidebar
-				include ../blocks/sidebar/sidebar
+				.col.col-sidebar
+					include ../blocks/sidebar/sidebar
 
 
 block popups
