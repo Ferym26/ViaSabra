@@ -199,24 +199,23 @@
 												</div>
 											</div>
 											<div class="row">
-												<div class="col-5">
-													<div class="form-group lang">
-														<select class="select-styler not-init" id="select-code" name="selectCode" data-placeholder="" required>
-															<option></option>
-															<option class="lang-us" style="background-image: url(&quot;images/flag-1.jpg&quot;)">+123</option>
-															<option class="lang-ru">+456</option>
-														</select>
-													</div>
-												</div>
-												<div class="col-7">
+												<div class="col-12">
 													<div class="form-group">
-														<input class="form-control" type="tel" name="phone">
+														<input id="phone" type="tel">
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="col-xl-6">
-											<p>123</p>
+											<div class="info-block">Information according to Selected Element This box would change according to what element is currently selected by the User.
+												<svg class="icon">
+													<use xlink:href="./images/sprite.svg#information"></use>
+												</svg>
+											</div>
+											<div class="form-group">
+												<textarea class="textarea" name="text" placeholder="Special Requests (Textarea)"></textarea>
+											</div>
+											<button class="btn btn--green-dark btn--sm" type="submit">Continue</button>
 										</div>
 									</div>
 								</form>

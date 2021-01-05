@@ -61,6 +61,21 @@
 					.col-12
 						.form-group
 							input#phone(type="tel")
+						//- .form-group.lang
+							select.select-styler#select-code.not-init(
+									name='selectCode'
+									data-placeholder=""
+									required
+								)
+								option
+								option(class="lang-us" style='background-image: url("images/flag-1.jpg")') +123
+								option(class="lang-ru") +456
+					//- .col-7
+						.form-group
+							input.form-control(
+								type='tel',
+								name='phone',
+							)
 
 			.col-xl-6
 				include ../info-block/info-block
@@ -69,4 +84,9 @@
 						name='text'
 						placeholder='Special Requests (Textarea)'
 					)
+				+alert({
+					mod: '--green',
+					icon: 'warning-sign',
+					text: 'There are not enough open seats in the chosen trip, can we pick this up in person? We will send you an email and make contact asap.',
+				})
 				button.btn.btn--green-dark.btn--sm(type='submit') Continue

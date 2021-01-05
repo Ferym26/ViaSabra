@@ -6,7 +6,7 @@ const uiInits = {
 		this.svgPolifill();
 		this.browserCheck();
 		this.lazy();
-		this.validation();
+		// this.validation();
 		// this.noizPicLoad();
 		if (window.matchMedia("(min-width: 1250px)").matches) {
 			// this.animations();
@@ -306,6 +306,14 @@ const uiInits = {
 		const multiSelect = $('.js_select2-init');
 		if (multiSelect.length > 0) {
 			multiSelect.select2();
+		}
+
+		// телефоны
+		const input = document.querySelector("#phone");
+		if (input != null) {
+			window.intlTelInput(input, {
+				preferredCountries: ['il'],
+			});
 		}
 	},
 }

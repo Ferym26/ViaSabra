@@ -1,0 +1,24 @@
+.alert
+	position: relative
+	margin-bottom: 21px
+	padding: 10px 85px 10px 17px
+	background-color: #d6ebcb
+	border-radius: 20px
+
+	&__icon
+		position: absolute
+		+hcenter
+		right: 10px
+		+sizeblock(62px)
+		+circle
+		background-color: #fff
+
+		.icon
+			position: absolute
+			+sizeblock(32px)
+			+center
+			fill: #000
+
+	&__text
+		// line-height: 1.3
+		font-size: 18px

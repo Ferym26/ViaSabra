@@ -1,0 +1,9 @@
+mixin alert(data)
+
+	+b.alert(
+		class=data.mod ? data.mod : false
+	)
+		+e.__icon
+			+icon(data.icon)
+
+		+e.__text= data.text
