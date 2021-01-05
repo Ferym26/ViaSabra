@@ -11,6 +11,10 @@
 		border-radius: 20px
 		border: 1px solid #707070
 
+		&:focus
+			outline: none
+			border-color: #213dd3
+
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag
 	background-color: $trp
 
@@ -19,3 +23,6 @@
 
 .iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text]
 	padding-left: 65px
+
+.iti--separate-dial-code .iti__selected-flag
+	background-color: $trp

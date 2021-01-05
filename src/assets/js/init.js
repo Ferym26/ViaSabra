@@ -313,6 +313,7 @@ const uiInits = {
 		if (input != null) {
 			window.intlTelInput(input, {
 				preferredCountries: ['il'],
+				separateDialCode: true,
 			});
 		}
 	},

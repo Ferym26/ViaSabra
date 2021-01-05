@@ -42,6 +42,26 @@
 
 		&.active ~ *
 
+			#{$this}__pic
+
+				&::after
+					right: 8px
+					background: url("data:image/svg+xml,%3Csvg width='10' height='22' viewBox='0 0 10 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0001 14V8H9.30589C5.05348 8 1.61022 4.71897 9.15527e-05 0.783173V21.2168C1.61022 17.281 5.05347 14 9.30589 14H10.0001Z' fill='%23d1d2d7'/%3E%3C/svg%3E") no-repeat 50% 50%
+					background-size: cover
+
+					+media($md)
+						transform-origin: -14px 0
+						transform: rotate(90deg) translate(6px, -16px)
+
+				&::before
+					left: 8px
+					background: url("data:image/svg+xml,%3Csvg width='10' height='22' viewBox='0 0 10 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0001 14V8H9.30589C5.05348 8 1.61022 4.71897 9.15527e-05 0.783173V21.2168C1.61022 17.281 5.05347 14 9.30589 14H10.0001Z' fill='%23d1d2d7'/%3E%3C/svg%3E") no-repeat 50% 50%
+					background-size: cover
+
+					+media($md)
+						transform-origin: -14px 0
+						transform: rotate(-90deg) translate(-17px, 22px)
+
 			#{$this}__icon
 				+sizeblock(26px)
 				background-color: #d1d2d7
@@ -73,6 +93,21 @@
 					top: -30px
 					left: 30px
 
+		&:first-child
+
+			#{$this}__pic
+
+				&::before
+					display: none
+
+		&:last-child
+
+			#{$this}__pic
+
+				&::after
+					display: none
+
+
 	&__pic
 		position: relative
 		display: flex
@@ -81,9 +116,37 @@
 		+sizeblock(54px)
 		margin: 0 auto 12px
 		// filter: url("#goo")
+		z-index: 5
 
 		+media($md)
 			margin: 0 20px 0 0
+
+		&::after
+			+pseudo
+			+sizeblock(10px, 22px)
+			top: 16px
+			right: -8px
+			background: url("data:image/svg+xml,%3Csvg width='10' height='22' viewBox='0 0 10 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0001 14V8H9.30589C5.05348 8 1.61022 4.71897 9.15527e-05 0.783173V21.2168C1.61022 17.281 5.05347 14 9.30589 14H10.0001Z' fill='%235d6174'/%3E%3C/svg%3E") no-repeat 50% 50%
+			background-size: cover
+			z-index: -5
+
+			+media($md)
+				transform-origin: -14px 0
+				transform: rotate(90deg) translate(22px, 0)
+
+		&::before
+			+pseudo
+			+sizeblock(10px, 22px)
+			top: 16px
+			left: -8px
+			transform: scale(-1, 1)
+			background: url("data:image/svg+xml,%3Csvg width='10' height='22' viewBox='0 0 10 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0001 14V8H9.30589C5.05348 8 1.61022 4.71897 9.15527e-05 0.783173V21.2168C1.61022 17.281 5.05347 14 9.30589 14H10.0001Z' fill='%235d6174'/%3E%3C/svg%3E") no-repeat 50% 50%
+			background-size: cover
+			z-index: -5
+
+			+media($md)
+				transform-origin: 14px 0
+				transform: rotate(-90deg) translate(28px, 10px)
 
 	&__line
 		position: absolute
@@ -91,6 +154,7 @@
 		+hcenter
 		left: 50%
 		background-color: #5d6174
+		z-index: -10
 
 		+media($xl)
 			width: 130px
@@ -108,6 +172,7 @@
 		+sizeblock(54px)
 		background-color: #5d6174
 		+circle
+		z-index: 4
 
 		&::after
 			+pseudo
