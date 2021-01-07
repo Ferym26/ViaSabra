@@ -1,0 +1,14 @@
+mixin card-blog(data)
+
+	+b.card-blog
+
+		+e.__bg
+			+lazy-img({pic: data.bg})
+
+		+e('a').__title(href='#')= data.title
+
+		+e.__meta
+			+e.__name= data.name
+			+e.__date 21/12/2042
+
+		+e.__descr= data.descr

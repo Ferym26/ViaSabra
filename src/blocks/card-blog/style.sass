@@ -1,0 +1,72 @@
+.card-blog
+	$this: &
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	height: 540px
+	margin-bottom: 30px
+	padding: 15px 15px 25px
+	border-radius: 10px
+	overflow: hidden
+
+	+media($xl)
+		height: 400px
+
+	&::before
+		+pseudo
+		+sizeblock(100%)
+		@extend %trbl
+		background-image: linear-gradient(180deg, $trp 0%,#000 100%)
+		z-index: -5
+
+	&:hover
+
+		#{$this}__bg
+			transform: scale(1.05)
+
+	&__bg
+		position: absolute
+		+sizeblock(100%)
+		@extend %trbl
+		transition: transform 0.3s ease
+		z-index: -10
+
+		img
+			+sizeblock(100%)
+			object-fit: cover
+
+	&__title
+		display: inline-block
+		margin-bottom: 16px
+		font-size: 22px
+		line-height: 1.2
+		font-weight: 700
+		color: #fff
+		+line-clamp(5)
+
+		&::after
+			+pseudo
+			+sizeblock(100%)
+			@extend %trbl
+			z-index: 15
+
+	&__meta
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 12px
+		color: #fff
+
+	&__name
+		position: relative
+
+		&::after
+			content: '|'
+			margin: 0 5px
+
+	&__date
+
+	&__descr
+		color: #fff
+		line-height: 1.3
+		+line-clamp(6)
